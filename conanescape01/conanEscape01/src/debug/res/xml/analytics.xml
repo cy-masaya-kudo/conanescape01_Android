@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <integer name="ga_sessionTimeout">60</integer>
+  <!--Replace placeholder ID with your tracking ID-->
+  <string name="ga_trackingId">UA-57295271-1</string>  <!-- TEST用 -->
+
+  <!--Enable automatic activity tracking-->
+  <bool name="ga_autoActivityTracking">false</bool>
+
+  <!--Enable automatic exception tracking-->
+  <bool name="ga_reportUncaughtExceptions">true</bool>
+
+</resources>

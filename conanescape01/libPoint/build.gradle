@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 14
+    buildToolsVersion "23.0.0"
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 21
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+//    defaultPublishConfig "productRelease"
+    publishNonDefault true
+    productFlavors {
+        develop {}
+        product {}
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+}
+
+dependencies {
+    compile project(':POPgate')
+    compile project(':cy_cybirdid')
+}

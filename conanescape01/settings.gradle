@@ -1,0 +1,25 @@
+include ':CYCompliance'
+include ':escapeEngineJava'
+include ':libBilling'
+include ':libPoint'
+include ':conanEscape01'
+
+include ':gency'
+include ':cryptolib'
+include ':gcm'
+include ':cy_gcm'
+include ':gcm_sub_toPUSH'
+include ':cy_gencydid'
+include ':cy_cybirdid'
+include ':CybirdUtility'
+include ':POPgate'
+
+project(':gency').projectDir = new File('Gency/gency')
+project(':cryptolib').projectDir = new File('Gency/cryptolib')
+project(':gcm').projectDir = new File('Gency/gcm')
+project(':gcm_sub_toPUSH').projectDir = new File('Gency/gcm_sub_toPUSH')
+project(':cy_gcm').projectDir = new File('Gency/cy_gcm')
+project(':cy_gencydid').projectDir = new File('Gency/cy_gencydid')
+project(':cy_cybirdid').projectDir = new File('Gency/cy_cybirdid')
+project(':CybirdUtility').projectDir = new File('Gency/CybirdUtility')
+project(':POPgate').projectDir = new File('Gency/POPgate')

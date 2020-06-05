@@ -1,0 +1,55 @@
+<resources>
+<!-- 320dpまで -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="item_cell_size">33dp</dimen>
+	<dimen name="item_cell_span">4dp</dimen>
+	<dimen name="game_main_width">290dp</dimen>
+	<dimen name="game_main_height">390dp</dimen>
+	<dimen name="game_items_width">120dp</dimen>
+
+	<dimen name="serif_bottom_margin">30dp</dimen>
+	<dimen name="event_bottom_width">50dp</dimen>
+	<dimen name="menus_bottom_margin">5dp</dimen>
+	<dimen name="item_zoom_height">300dp</dimen>
+	<dimen name="item_zoom_width">300dp</dimen>
+
+	<dimen name="serif_font_size">16sp</dimen>
+	<dimen name="hint_font_size">16sp</dimen>
+	<dimen name="font_cond">10sp</dimen>
+	<dimen name="serif_padding">10dp</dimen>
+	<dimen name="serif_text_margin_bottom">4dp</dimen>
+	
+	<dimen name="web_banner_height">160dp</dimen>
+	<dimen name="top_menus_margin_bottom">10dp</dimen>
+	<dimen name="web_copyright_height">20dp</dimen>
+	<dimen name="top_menu_margin_top">-20dp</dimen>
+		
+	<dimen name="stages_center_margin_top">20dp</dimen>
+	<dimen name="stages_margin_right">15dp</dimen>
+
+	<dimen name="option_volume_text_width">100dp</dimen>
+	<dimen name="hint_root_padding_lr">40dp</dimen>
+	<dimen name="hint_root_margin_top">20dp</dimen>
+	<dimen name="hint_margin_bottom">5dp</dimen>
+	<dimen name="coin_num_font_size">18sp</dimen>
+	<dimen name="purchase_container_margin_top">60dp</dimen>
+	
+	<dimen name="chara_width">145dp</dimen>
+	<dimen name="chara_height">390dp</dimen>
+	
+	<dimen name="paper_title_top_margin">20dp</dimen>
+	
+	<dimen name="next_stage_button_height">120dp</dimen>
+
+	<dimen name="purchase_stage_price">12sp</dimen>
+	<dimen name="purchase_stage_price_margin_bottom">12dp</dimen>
+	<dimen name="purchase_coin_price">12sp</dimen>
+	<dimen name="purchase_coin_price_margin_left">30dp</dimen>
+	<dimen name="purchase_coin_price_margin_top">12dp</dimen>
+	
+	<dimen name="purchase_coin_price2">10sp</dimen>
+	<dimen name="purchase_coin_price_margin_left2">20dp</dimen>
+	<dimen name="purchase_coin_price_margin_bottom2">8dp</dimen>
+</resources>

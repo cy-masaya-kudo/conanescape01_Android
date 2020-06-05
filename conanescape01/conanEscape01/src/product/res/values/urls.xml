@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 本番用 -->
+	<string name="api_domain">dev.escape02.conan-game.jp</string>
+	<string name="url_termsofuse">https://dev.escape02.conan-game.jp/info/terms/googleplay</string>
+	<string name="url_tokusho">https://dev.escape02.conan-game.jp/info/tokusho/googleplay</string>
+	<string name="url_fund">https://dev.escape02.conan-game.jp/info/settlement/googleplay</string>
+
+	<string name="url_agreement">https://dev.escape02.conan-game.jp/info/terms/googleplay</string>
+</resources>

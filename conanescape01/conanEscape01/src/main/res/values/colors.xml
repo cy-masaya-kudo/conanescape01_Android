@@ -1,0 +1,7 @@
+<resources>
+
+	<color name="transparent">#7F000000</color>
+	<color name="hintcoin_price_color">#ff7e0101</color>
+	<color name="game_item_cell_overlay">#44000000</color>
+
+</resources>

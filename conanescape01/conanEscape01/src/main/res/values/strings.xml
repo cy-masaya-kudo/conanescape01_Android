@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">コナン脱出</string>
+
+    <!-- TODO Google API Consoleから取得したSENDERIDに変更する -->
+    <string name="LIB_GCM_SENDERID">691179235657</string>
+    
+    <string name="saved">セーブをしました。</string>
+    <string name="save_error">セーブに失敗しました。</string>
+    <string name="stage_select">ステージ選択</string>
+
+    <string name="err_title">エラー</string>
+    <string name="loading_stage">データを取得中&#8230;</string>
+    <string name="authorizing">認証中&#8230;</string>
+    <string name="err_stageapi">ステージデータの取得に失敗しました。</string>
+   	<string name="err_network">通信環境の良いところでお試しください。</string>
+   	<string name="warn_stageapi_retry">ステージデータを取得していません。\n再試行しますか？</string>
+   	<string name="close">閉じる</string>
+   	<string name="backto_top">ゲーム情報は保存されていません。\n終了してトップへ戻ってよろしいですか？</string>
+   	<string name="alert_save">セーブが完了しました。\nTOPページに戻りますか？</string>
+   	<string name="alert_save_positive">TOPに戻る</string>
+   	<string name="alert_save_negative">ゲーム続行</string>
+   	<string name="coin_get">取得中</string>
+ 	<string name="err_coin_get">取得失敗</string>
+   	
+   	<string name="getting_price">価格取得中</string>
+   	<string name="noprice">価格取得失敗</string>
+   	<string name="err_json">サーバー応答を正しく解析できませんでした。</string>
+    <string name="err_server">サーバーに接続出来ませんでした。</string>
+   		
+   	<string name="restore_done">復元処理が完了しました。</string>
+   	<string name="err_restore">復元処理ができませんでした。\nネットワーク接続やGooglePlayのアカウント設定を確認して下さい。</string>
+
+   	<string name="coin_num">%1$d/10</string>
+   	<string name="point_trading">ヒントコインを獲得中です&#8230;</string>
+   	<string name="err_purchase_owned">すでに購入済みです。</string>
+   	<string name="err_hint_consume">ヒントコインを使えませんでした。ネットワーク接続などを確認し、もう一度お試し下さい。</string>
+   	<string name="hint_alert">ヒントコインを1枚消費します。</string>
+   	
+   	<string name="err_purchase">購入できません。</string>
+</resources>

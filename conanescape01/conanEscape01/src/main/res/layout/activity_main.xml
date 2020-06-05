@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f000"
+    tools:context=".gui.MainActivity" >
+
+    <jp.co.cybird.android.escape.util.TransparentWebView
+        android:id="@+id/web_topbanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/web_banner_height"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="none" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/web_topbanner" >
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/black_fade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:visibility="invisible" >
+
+    </FrameLayout>
+
+</RelativeLayout>

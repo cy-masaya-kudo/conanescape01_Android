@@ -1,0 +1,77 @@
+// debug用アプリの名称にprefixを付ける
+def debugAppRename(variant, labelResource, lang) {
+    def flavor = variant.flavorName
+    def buildtype = variant.buildType
+    // Append buildType name to app label
+    if (buildtype.debuggable) {
+        variant.mergeResources << {
+        	def prefix = debugAppNamePrefix
+        	if( buildtype.name.equals("enterprise") ){
+        		prefix = enterpriseAppNamePrefix
+        	}
+        	
+            def valuesFile = "$buildDir/intermediates/res/merged/${flavor}/${buildtype.name}"
+            if (lang.length() == 0) {
+                // default言語
+                valuesFile = valuesFile + "/values/values.xml"
+            } else {
+                // 言語別
+                valuesFile = valuesFile + "/values-${lang}/values-${lang}.xml"
+            }
+            def values = (new XmlParser()).parse(valuesFile)
+            values.string.each { m ->
+                if (m.@name == labelResource) {
+                    def index = m.text().indexOf(prefix)
+                    if (index == -1) {
+                        m.value = "${prefix}${m.text()}"
+                        new XmlNodePrinter(new PrintWriter(new FileWriter(valuesFile)))
+                                .print(values)
+                    }
+                }
+            }
+        }
+    }
+}
+
+android {
+    // (appName)_(flavorName)_r(versionCode)_v(versionName)_timestamp.apk というファイル名でapkを出力
+    // gradle.properties内の【appName】を書き換える
+    // gradle.properties内の【deployTo】を任意のフォルダに書き換えると、そのフォルダにapkが出力されます
+    applicationVariants.all { variant ->
+        if (variant.buildType.name.equals("release") || variant.buildType.name.equals("enterprise") ) {
+            variant.outputs.each { output ->
+                if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+                    // Rename APK
+                    def versionCode = variant.versionCode
+                    def versionName = variant.versionName
+                    def flavorName = variant.flavorName
+                    //noinspection UnnecessaryQualifiedReference
+                    def date = new java.text.SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())
+                    def newName = "${appName}_${flavorName}_${variant.buildType.name}_r${versionCode}_v${versionName}_${date}.apk"
+
+                    def publish = project.tasks.create("publish_${flavorName}_${variant.buildType.name}")
+
+                    // Move and Rename APK
+                    def task = project.tasks.create("publish${variant.name.capitalize()}Apk", Copy)
+                    //noinspection GroovyAssignabilityCheck
+                    task.from(output.outputFile)
+                    //noinspection GroovyAssignabilityCheck
+                    task.rename(output.outputFile.name, newName)
+                    task.into(deployTo)
+
+                    //noinspection GroovyAssignabilityCheck
+                    task.dependsOn variant.assemble
+                    publish.dependsOn task
+                }
+            }
+        }
+
+        debugAppRename(variant, 'app_name', "")
+        if (jaName.equals("true")) {
+            // 日本語アプリ名が英語と異なる場合、gradle.properties内の【jaName】をtrueにする
+            debugAppRename(variant, 'app_name', "ja")
+        }
+    }
+
+
+}

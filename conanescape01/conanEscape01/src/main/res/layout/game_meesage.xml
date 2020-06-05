@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/img_chara"
+        android:layout_width="@dimen/chara_width"
+        android:layout_height="@dimen/chara_height"
+        android:layout_gravity="bottom|right"
+        android:scaleType="fitXY"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/name"
+            android:gravity="center"
+            android:text="小五郎"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/serif_font_size" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="@dimen/serif_padding" >
+
+            <TextView
+                android:id="@+id/textview_serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/serif_text_margin_bottom"
+                android:maxLines="4"
+                android:minLines="4"
+                android:text="あいうえおかきくけこ"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/serif_font_size" />
+
+            <ImageView
+                android:id="@+id/img_triangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/triangle" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".gui.GameActivity" >
+
+    <RelativeLayout
+        android:id="@+id/gameview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_main_height"
+        android:layout_above="@+id/inc_items"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back_0" >
+        
+        <FrameLayout
+	            android:id="@+id/nodeRoot"
+	            android:layout_width="@dimen/game_main_width"
+	            android:layout_height="@dimen/game_main_height"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true">
+
+	        <ImageView
+	            android:id="@+id/nodeImage"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:scaleType="fitStart" />
+	
+	        <jp.co.cybird.android.escape.util.LayerView
+	            android:id="@+id/layer_view"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" />
+	    </FrameLayout>
+
+        <jp.co.cybird.android.escape.util.CollisionView
+            android:id="@+id/collisionView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/nodeRoot"
+            android:layout_alignLeft="@+id/nodeRoot"
+            android:layout_alignRight="@+id/nodeRoot"
+            android:layout_alignStart="@+id/nodeRoot"
+            android:layout_alignEnd="@+id/nodeRoot"
+            android:layout_alignTop="@+id/nodeRoot" />
+
+        <RelativeLayout
+            android:id="@+id/itemview_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/img_itemzoom"
+                android:layout_width="@dimen/item_zoom_width"
+                android:layout_height="@dimen/item_zoom_height"
+                android:layout_centerInParent="true" />
+
+            <jp.co.cybird.android.escape.util.LayerView
+                android:id="@+id/item_layerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_itemzoom"
+                android:layout_alignLeft="@id/img_itemzoom"
+                android:layout_alignRight="@id/img_itemzoom"
+                android:layout_alignStart="@id/img_itemzoom"
+                android:layout_alignEnd="@id/img_itemzoom"
+                android:layout_alignTop="@id/img_itemzoom" />
+
+            <jp.co.cybird.android.escape.util.CollisionView
+                android:id="@+id/item_collisionView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_itemzoom"
+                android:layout_alignLeft="@id/img_itemzoom"
+                android:layout_alignRight="@id/img_itemzoom"
+                android:layout_alignStart="@id/img_itemzoom"
+                android:layout_alignEnd="@id/img_itemzoom"
+                android:layout_alignTop="@id/img_itemzoom" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/img_itemzoom"
+                android:layout_alignRight="@+id/img_itemzoom"
+                android:layout_alignTop="@+id/img_itemzoom"
+                android:background="@null"
+                android:onClick="onClick"
+                android:src="@drawable/btn_game_close" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/serif_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/nodeRoot"
+            android:layout_alignLeft="@id/nodeRoot"
+            android:layout_alignRight="@id/nodeRoot"
+            android:layout_alignStart="@id/nodeRoot"
+            android:layout_alignEnd="@id/nodeRoot"
+            layout="@layout/game_meesage"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/image_drag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+		<FrameLayout
+		    android:id="@+id/animRoot"
+		    android:layout_width="@dimen/game_main_width"
+		    android:layout_height="@dimen/game_main_height"
+		    android:layout_centerHorizontal="true"
+		    android:layout_centerVertical="true"
+		    android:visibility="invisible" >
+
+	        <ImageView
+	            android:id="@+id/animImage"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:scaleType="fitStart" />
+	
+	        <jp.co.cybird.android.escape.util.LayerView
+	            android:id="@+id/anim_layer_view"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" />
+	    </FrameLayout>        
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/inc_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inc_gamemenus"
+        layout="@layout/game_items" />
+
+    <include
+        android:id="@+id/inc_gamemenus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        layout="@layout/game_menus" />
+
+    <FrameLayout
+        android:id="@+id/effectview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" >
+
+    </FrameLayout>
+
+</RelativeLayout>

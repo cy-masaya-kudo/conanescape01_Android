@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context="jp.co.cybird.android.mildescape.ausmartpass.gui.OptionActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn_middlenext" />
+
+    <Button
+        android:id="@+id/btn_nextstage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/next_stage_button_height"
+        android:layout_centerInParent="true"
+        android:background="#01000000" />
+
+    <FrameLayout
+        android:id="@+id/menus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_1"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/btn_top"
+            style="?android:attr/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:onClick="onTop"
+            android:src="@drawable/btn_option_top" />
+
+    </FrameLayout>
+
+</RelativeLayout>

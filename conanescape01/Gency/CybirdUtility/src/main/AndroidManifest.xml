@@ -1,0 +1,7 @@
+<manifest
+    package="jp.co.cybird.android.lib.gcm"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+</manifest>

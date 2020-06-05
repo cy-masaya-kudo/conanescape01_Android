@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="eula_version">1</integer>
+	<integer name="minors_eula_version">1</integer>
+
+	<!-- 年齢確認ダイアログの基本背景色 -->
+	<color name="minors_dialog_base_background">@android:color/black</color>
+
+	<!--問い合わせポップアップ-->
+	<string-array name="contacts">
+		<item>通常お問い合わせ</item>
+		<item>親権者のお問い合わせ</item>
+	</string-array>
+</resources>

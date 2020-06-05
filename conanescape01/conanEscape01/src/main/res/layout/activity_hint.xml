@@ -1,0 +1,165 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_menu_bg"
+    tools:context=".fragment.OptionMenuFragment" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:id="@+id/paper_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_paper" />
+
+        <ImageView
+            android:id="@+id/im_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/paper_title_top_margin"
+            android:src="@drawable/hint" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/hint_root_margin_top"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <RelativeLayout
+            android:id="@+id/coin_num_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/hint_root_padding_lr"
+            android:paddingRight="@dimen/hint_root_padding_lr" >
+
+            <ImageView
+                android:id="@+id/ImageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/coin" />
+
+            <ImageView
+                android:id="@+id/ImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/ImageView1"
+                android:src="@drawable/text_hintcoin" />
+
+            <TextView
+                android:id="@+id/text_coin_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="10"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/coin_num_font_size" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btn_buyhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/hint_margin_bottom"
+            android:layout_marginTop="@dimen/hint_margin_bottom"
+            android:background="@null"
+            android:src="@drawable/btn_hint_buyhint" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/hint_margin_bottom" >
+
+            <ImageButton
+                android:id="@+id/btn_buy_coin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_hint_buy3" />
+
+            <TextView
+                android:id="@+id/text_price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/purchase_coin_price_margin_bottom2"
+                android:layout_marginLeft="@dimen/purchase_coin_price_margin_left2"
+                android:layout_marginStart="@dimen/purchase_coin_price_margin_left2"
+                android:text="@string/getting_price"
+                android:textColor="@color/hintcoin_price_color"
+                android:textSize="@dimen/purchase_coin_price2" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_buy_coin10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_hint_buy10" />
+
+		<TextView
+		    android:id="@+id/text_price10"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="bottom|center_horizontal"
+		    android:layout_marginBottom="@dimen/purchase_coin_price_margin_bottom2"
+		    android:layout_marginLeft="@dimen/purchase_coin_price_margin_left2"
+		    android:layout_marginStart="@dimen/purchase_coin_price_margin_left2"
+		    android:text="@string/getting_price"
+		    android:textColor="@color/hintcoin_price_color"
+		    android:textSize="@dimen/purchase_coin_price2" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="7dp"
+        android:background="@null"
+        android:src="@drawable/btn_hint_close" />
+
+    <Button
+        android:id="@+id/btn_buy_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0F0"
+        android:text="Hint10"
+        android:textColor="#000" />
+
+</FrameLayout>

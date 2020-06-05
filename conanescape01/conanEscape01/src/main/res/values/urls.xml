@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 共通 -->
+	<string name="url_banner1">http://sp.mco.cybird.ne.jp/cms/cms_top.php?key1=40&amp;key2=1</string>
+	<string name="url_banner2">http://sp.mco.cybird.ne.jp/cms/cms_top.php?key1=40&amp;key2=3</string>
+	<string name="url_banner3">http://sp.mco.cybird.ne.jp/cms/cms_top.php?key1=40&amp;key2=4</string>
+
+	<string name="url_copyright">http://sp.mco.cybird.ne.jp/cms/cms_top.php?key1=40&amp;key2=2</string>
+	<string name="stage_data">api/api_contents_download.php</string>
+	<string name="url_contact">https://my.cybird.ne.jp/sp-inq/MCP002/1</string>
+	<string name="url_privacypolicy">https://my.cybird.ne.jp/sp-inq/agreement?cont=MCP002&amp;url=1</string>
+
+</resources>

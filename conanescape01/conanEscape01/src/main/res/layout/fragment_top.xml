@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <jp.co.cybird.android.escape.util.TransparentWebView
+        android:id="@+id/web_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/web_copyright_height"
+        android:layout_alignParentBottom="true"
+        android:background="#000"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="none" />
+
+    <ImageView
+        android:id="@+id/img_logo2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/web_copyright"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/title_bg" />
+
+    <FrameLayout
+        android:id="@+id/center_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/center_lay"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/top_menu_margin_top"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_newgame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_menus_margin_bottom"
+            android:background="@null"
+            android:src="@drawable/btn_new" />
+
+        <ImageButton
+            android:id="@+id/btn_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_menus_margin_bottom"
+            android:background="@null"
+            android:src="@drawable/btn_load" />
+
+        <ImageButton
+            android:id="@+id/btn_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/btn_options" />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/title" />
+
+</RelativeLayout>

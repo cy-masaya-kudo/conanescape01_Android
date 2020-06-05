@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- test用 -->
+	<string name="api_domain">test.escape02.conan-game.jp</string>
+	<string name="url_termsofuse">https://test.escape02.conan-game.jp/info/terms/googleplay/index.html</string>
+	<string name="url_tokusho">https://test.escape02.conan-game.jp/info/tokusho/googleplay/index.html</string>
+	<string name="url_fund">https://test.escape02.conan-game.jp/info/settlement/googleplay/index.html</string>
+
+	<string name="url_agreement">https://test.escape02.conan-game.jp/info/terms/googleplay/index.html</string>
+
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+<!-- w340dp -->
+    <dimen name="game_main_width">320dp</dimen>
+	<dimen name="game_main_height">430dp</dimen>
+
+    <dimen name="next_stage_button_height">120dp</dimen>
+
+	<dimen name="chara_width">160dp</dimen>
+	<dimen name="chara_height">430dp</dimen>
+    
+	<dimen name="top_menus_margin_bottom">10dp</dimen>
+	
+	<dimen name="stages_center_margin_top">20dp</dimen>
+	<dimen name="stages_margin_right">15dp</dimen>
+	
+	<dimen name="purchase_stage_price">14sp</dimen>
+	<dimen name="purchase_stage_price_margin_bottom">15dp</dimen>
+	<dimen name="purchase_coin_price">14sp</dimen>
+	<dimen name="purchase_coin_price_margin_left">30dp</dimen>
+	<dimen name="purchase_coin_price_margin_top">16dp</dimen>
+	
+	<dimen name="purchase_coin_price2">14sp</dimen>
+	<dimen name="purchase_coin_price_margin_left2">20dp</dimen>
+	<dimen name="purchase_coin_price_margin_bottom2">8dp</dimen>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/stages_margin_right"
+    android:paddingRight="@dimen/stages_margin_right" >
+
+    <ImageView
+        android:id="@+id/img_stage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ep_2"
+        android:clickable="true"
+        android:src="@drawable/btn_src_e" />
+
+</FrameLayout>
